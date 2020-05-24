@@ -13116,7 +13116,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><h1><center>Topic Classification</center></h1>
+<p><h1 style="text-align: center">Topic Classification</h1>
 <img src="images/logo.jpg" style="width:500px;height:300px"></p>
 
 </div>
@@ -13125,26 +13125,20 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Overview">Overview<a class="anchor-link" href="#Overview">&#182;</a></h1><p>My work consist of both classification and clustering analysis.</p>
+<h1 id="Overview">Overview<a class="anchor-link" href="#Overview">&#182;</a></h1><p>My work consist of both classification and clustering analysis.<br></p>
+<p><strong>Clustering</strong>:<br>
+I used two different approaches.</p>
+<ul>
+<li>In the first one, I used <strong>Latent Dirichlet Allocation</strong> method and worked with the tf-idf scheme. I detected several (per-class) topics by considering the most powerful words.</li>
+<li>In the second one, I constructed a Word Network upon which I applied <strong>Community Detection</strong> using the <strong>Louvain</strong> method. The detected communities express different topics. Also, I extracted features in order to improve my models performance regarding the classification task.</li>
+</ul>
+<p><br></p>
 <p><strong>Classification</strong>:<br>
 I used two different representations, <strong>Td-idf</strong> and <strong>Word Embeddings</strong>.</p>
 <ul>
 <li>In the first case I used several sklearn classifiers</li>
 <li>In the second I implemented an LSTM in pytorch<br>
 (In both cases I didn't tune the hyper-paremeters)</li>
-</ul>
-<p><br></p>
-<p><strong>Clustering</strong>:<br>
-I used two different approaches.</p>
-<ul>
-<li>In the first one, I used <strong>Latent Dirichlet Allocation</strong> method and worked with the tf-idf scheme. I detected several (per-class) topics by considering the most powerful words.</li>
-<li>In the second one, constructed a Word Network, upon which I applied <strong>Community Detection</strong> using the <strong>Louvain</strong> method. The detected communities express different topics.</li>
-</ul>
-<p><br></p>
-<p><h4 style="color:red">Critical Notes:</h4><br></p>
-<ul>
-<li>I did't find good enough implementation of lemmatization and stemming for the Greek language. So, both the tf-idf scheme and the Community Detction work with a bit noisy data<br></li>
-<li>Regarding the LSTM, I appended the word embeddings of all the words within each document after preprocessing. I could use a more clever represantation</li>
 </ul>
 
 </div>
